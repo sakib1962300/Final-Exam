@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling</title>
+    <style>
+        .styled-text {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button-group button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragraph" class="styled-text">This is a paragraph</p>
+    <div class="button-group">
+        <button onclick="toggleStyle('bold')">Bold</button>
+        <button onclick="toggleStyle('italic')">Italic</button>
+        <button onclick="toggleStyle('underline')">Underline</button>
+    </div>
+
+    <script>
+        function toggleStyle(style) {
+            const paragraph = document.getElementById('paragraph');
+            switch (style) {
+                case 'bold':
+                    paragraph.style.fontWeight = paragraph.style.fontWeight === 'bold' ? 'normal' : 'bold';
+                    break;
+                case 'italic':
+                    paragraph.style.fontStyle = paragraph.style.fontStyle === 'italic' ? 'normal' : 'italic';
+                    break;
+                case 'underline':
+                    paragraph.style.textDecoration = paragraph.style.textDecoration === 'underline' ? 'none' : 'underline';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html
